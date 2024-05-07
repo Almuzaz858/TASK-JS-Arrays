@@ -9,9 +9,17 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
-}
-
+  if (numbers.length%2==0) {
+    return false
+  }
+  else {
+    return true
+  }
+  console.log(numbers)
+  
+} 
+let x = isArrayLengthOdd ([1, 2, 3, 4])
+console.log(x)
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -22,9 +30,19 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3]) -> false
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
-function isArrayLengthEven(numbers) {
-  // Your code here
+function isArrayLengthEven(numbers){
+  if (numbers.length%2==0) {
+    return true
+  }
+  else {
+    return false
+  }
+  console.log(numbers)
+
 }
+  let y = isArrayLengthEven ([1, 2, 3, 4])
+  console.log(y)
+
 
 /**
  * addLailaToArray(instructors):
@@ -35,9 +53,12 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors.push("Laila")
+console.log(instructors)
+
 }
 
+addLailaToArray(["mshary", "Hasan"])
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -47,9 +68,11 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  const removedteam = teams.pop()
+  return removedteam
 }
-
+ 
+console.log(eliminateTeam(["Brazil", "Germany",]))
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -61,9 +84,13 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  if (fruits.length % 2 === 0) {
+    return fruits.slice(fruits.length /2, fruits.length );
+  } else {
+    return [];
+  }
 }
-
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]))
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
